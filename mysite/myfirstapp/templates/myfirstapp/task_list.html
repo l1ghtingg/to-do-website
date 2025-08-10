@@ -1,0 +1,13 @@
+<h1>ту-душка, решающая ваши проблемы</h1>
+<table>
+    <tr>
+        <th>Item</th>
+    </tr>
+    {% for task in object_list%}
+    <tr>
+        <th>{{task.title}}</th>
+    </tr>
+    {% empty %}
+    <h3>ничиво нет в списке</h3>
+    {% endfor %}
+</table>
