@@ -11,9 +11,17 @@
 <a href="{% url 'login' %}">Login</a>
 {% endif %}
 
+
 <hr>
-<h1>ту-душка, решающая ваши проблемы</h1>
+
+<h1>ту-душка, решающая ваши проблемы {{color}}</h1>
 <a href="{% url 'task-create' %}">Создать таску</a>
+
+<form method="get">
+    <input type="text" name="search-area" value="{{ search_input }}" placeholder="Поиск...">
+    <button type="submit">Поиск</button>
+</form>
+
 <table>
     <tr>
         <th>Item</th>
